@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ucapan Ulang Tahun</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <audio id="music" src="happy.mp3" loop></audio>
+
+  <div class="container">
+    <div class="form-section" id="formSection">
+      <h2>🎉 Kirim Ucapan Ulang Tahun 🎁</h2>
+      <input type="text" id="receiverInput" placeholder="Nama penerima" />
+      <input type="text" id="senderInput" placeholder="Nama pengirim" />
+      <button onclick="showGreeting()">Tampilkan Ucapan 🎂</button>
+    </div>
+
+    <div class="card hidden" id="greetingCard">
+      <h1>🎂 Selamat Ulang Tahun Sweety 😹 <span id="receiverName"></span>!</h1>
+      <img src="cake.jpeg" alt="Kue Ulang Tahun" class="cake-img" />
+      <p>Semoga harimu penuh kebahagiaan dan cinta! 🥳❤️</p>
+      <p>Dan semoga semua impianmu tercapai dan hari-harimu dipenuhi senyuman🌟</p>
+      <p>Aduhai seronoknye main laga-laga 😹😹😹😹😹</p>
+      <div class="signature">~ Dari <span id="senderName"></span></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

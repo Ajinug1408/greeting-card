@@ -1,0 +1,155 @@
+/* Reset dan dasar */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  overflow-x: hidden;
+  background: linear-gradient(135deg, #ffd1dc, #ffe4e1);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* Container Utama */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+}
+
+/* Form Section */
+.form-section {
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  animation: fadeIn 1.5s ease-in-out;
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input dan Tombol */
+input {
+  padding: 12px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 12px 30px;
+  background: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #e055a3;
+}
+
+/* Kartu Ucapan */
+.card {
+  background-color: #fff;
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.cake-img {
+  width: 150px;
+  margin: 20px 0;
+}
+
+.signature {
+  margin-top: 25px;
+  font-style: italic;
+  color: #666;
+  font-size: 18px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Animasi Fade In */
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* Animasi Hati/Love */
+.heart {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: red;
+  transform: rotate(45deg);
+  animation: float 4s linear infinite;
+  opacity: 0.7;
+  z-index: 999;
+  pointer-events: none;
+}
+
+.heart::before,
+.heart::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+.heart::after {
+  left: -10px;
+  top: 0;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) scale(1) rotate(45deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.2) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+/* Responsif Mobile */
+@media (max-width: 480px) {
+  .form-section, .card {
+    padding: 25px;
+    border-radius: 15px;
+  }
+
+  .cake-img {
+    width: 120px;
+  }
+
+  .signature {
+    font-size: 16px;
+  }
+}
